@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+*.log
+public/
+.deploy*/
+_multiconfig.yml
+.github*/
+source/_posts/

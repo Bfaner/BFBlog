@@ -1,0 +1,465 @@
+/* @font-face {
+  font-family: Candyhome;
+  src: url(https://npm.elemecdn.com/anzhiyu-blog@1.1.6/fonts/Candyhome.ttf);
+  font-display: swap;
+  font-weight: lighter;
+} */
+/* 引入字体 */
+@font-face {
+  font-family: ZhuZiAYuanJWD;
+  /* src: url(https://npm.elemecdn.com/anzhiyu-blog@1.1.6/fonts/ZhuZiAWan.woff2); */
+  src: url(ZhuZiAWan.woff2);
+  font-display: swap;
+  font-weight: lighter;
+}
+
+div#menus {
+  font-family: "ZhuZiAYuanJWD";
+}
+h1#site-title {
+  font-family: ZhuZiAYuanJWD;
+  font-size: 3em !important;
+}
+a.article-title,
+a.blog-slider__title,
+a.categoryBar-list-link,
+h1.post-title {
+  font-family: ZhuZiAYuanJWD;
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 3em;
+  /* 可以定义图标大小 */
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 时间轴生肖icon */
+svg.icon {
+  /* 这里定义svg.icon，避免和Butterfly自带的note标签冲突 */
+  width: 1em;
+  height: 1em;
+  /* width和height定义图标的默认宽度和高度*/
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+} 
+
+.icon-zhongbiao::before {
+  color: #f7c768;
+}
+
+/* 解决artitalk的图标问题 */
+#uploadSource > svg {
+  width: 1.19em;
+  height: 1.5em;
+}
+
+/*top-img黑色透明玻璃效果移除，不建议加，除非你执着于完全一图流或者背景图对比色明显 */
+#page-header:not(.not-top-img):before {
+  background-color: transparent !important;
+}
+
+/* 首页文章卡片 */
+#recent-posts > .recent-post-item {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* 首页侧栏卡片 */
+#aside-content .card-widget {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* 文章页面正文背景 */
+div#post {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* 分页页面 */
+div#page {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* 归档页面 */
+div#archive {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* 标签页面 */
+div#tag {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* 分类页面 */
+div#category {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/*夜间模式伪类遮罩层透明*/
+[data-theme="dark"] #recent-posts > .recent-post-item {
+  background: #121212;
+}
+
+[data-theme="dark"] .card-widget {
+  background: #121212 !important;
+}
+
+[data-theme="dark"] div#post {
+  background: #121212 !important;
+}
+
+[data-theme="dark"] div#tag {
+  background: #121212 !important;
+}
+
+[data-theme="dark"] div#archive {
+  background: #121212 !important;
+}
+
+[data-theme="dark"] div#page {
+  background: #121212 !important;
+}
+
+[data-theme="dark"] div#category {
+  background: #121212 !important;
+}
+
+[data-theme="dark"] div#category {
+  background: transparent !important;
+}
+/* 页脚透明 */
+#footer {
+  background: transparent !important;
+}
+
+/* 头图透明 */
+#page-header {
+  background: transparent !important;
+}
+
+#rightside > div > button {
+  border-radius: 5px;
+}
+
+/* 滚动条 */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #425aef;
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #425aef;
+}
+
+/* 鼠标图标 */
+/* body {
+  cursor: url("/img/x1.cur"), auto;
+}
+a,
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
+  cursor: url("/img/x2.cur"), auto !important;
+} */
+/* md网站下划线 */
+#article-container a:hover {
+  text-decoration: none !important;
+}
+
+#article-container #hpp_talk p img {
+  display: inline;
+}
+
+/* 404页面 */
+#error-wrap {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 1000px;
+  transform: translate(0, -50%);
+}
+
+#error-wrap .error-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
+  height: 18rem;
+  border-radius: 8px;
+  background: var(--card-bg);
+  box-shadow: var(--card-box-shadow);
+  transition: all 0.3s;
+}
+
+#error-wrap .error-content .error-img {
+  box-flex: 1;
+  flex: 1;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background-color: #425aef;
+  background-position: center;
+  background-size: cover;
+}
+
+#error-wrap .error-content .error-info {
+  box-flex: 1;
+  flex: 1;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 14px;
+  font-family: Titillium Web, "PingFang SC", "Hiragino Sans GB", "Microsoft JhengHei", "Microsoft YaHei", sans-serif;
+}
+#error-wrap .error-content .error-info .error_title {
+  margin-top: -4rem;
+  font-size: 9em;
+}
+#error-wrap .error-content .error-info .error_subtitle {
+  margin-top: -3.5rem;
+  word-break: break-word;
+  font-size: 1.6em;
+}
+#error-wrap .error-content .error-info a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.3rem 1.5rem;
+  background: var(--btn-bg);
+  color: var(--btn-color);
+}
+
+#body-wrap.error .aside-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  bottom: 0px;
+  position: absolute;
+  padding: 1rem;
+  width: 100%;
+  overflow: scroll;
+}
+
+#body-wrap.error .aside-list .aside-list-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#body-wrap.error .aside-list .aside-list-item {
+  padding: 0.5rem;
+}
+
+#body-wrap.error .aside-list .aside-list-item img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+#body-wrap.error .aside-list .aside-list-item .thumbnail {
+  overflow: hidden;
+  width: 230px;
+  height: 143px;
+  background: var(--anzhiyu-card-bg);
+  display: flex;
+}
+
+#body-wrap.error .aside-list .aside-list-item .content .title {
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-height: 1.5;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: center;
+  padding-top: 0.5rem;
+  color: white;
+}
+
+#body-wrap.error .aside-list .aside-list-item .content time {
+  display: none;
+}
+
+/* 代码框主题 */
+#article-container figure.highlight {
+  border-radius: 10px;
+}
+
+/* 首页分类条展示 */
+#category-bar{
+  /* 内边距填充 */
+  padding: 0.4rem 1rem 0.4rem 0.5rem;
+  /* 背景色 */
+  background: var(--card-bg);
+  /* 圆角 */
+  border-radius: 12px;
+  /* 弹性布局 */
+  display: flex;
+  /* 禁止自动换行 */
+  white-space: nowrap;
+  /* 超出部分隐藏 */
+  overflow: hidden;
+  /* 下边距 */
+  /* margin-bottom: 1rem; */
+  margin-bottom: auto;
+  /* 上边距 */
+  margin-top: 16px;
+  border: var(--style-border);
+  /* 宽度 */
+  width:100%;
+}
+
+@media screen and (max-width: 768px){
+  #category-bar{
+    border-radius: 0;
+  }
+}
+
+#category a.category-bar-item.select a{
+  display: none;
+}
+
+.category-in-bar{
+  display: flex;
+  white-space: nowrap;
+}
+
+.category-in-bar-tips{
+  margin-right: 1rem;
+}
+
+.category-bar-items{
+  white-space: nowrap;
+  overflow-x: scroll;
+  display: flex;
+}
+
+.category-bar-items::-webkit-scrollbar{
+  display: none;
+}
+
+.category-bar-item a{
+  color: #000;
+  padding: 0.1rem 0.5rem;
+  margin: 0 0.25rem;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+.category-bar-item:hover a{
+  background:  #65A0D4;
+  color: #fff;
+}
+
+.category-bar-item.select a {
+  background:  #65A0D4;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.category-bar-more{
+  color: #000;
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
+.category-bar-more:hover{
+  color: #65A0D4;
+  font-weight: bold;
+}
+
+.category-bar-more.select{
+  color: #0570ce;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+/*夜间模式伪类遮罩层透明*/
+[data-theme="dark"] #category a.category-bar-item.select a{
+  display: none;
+}
+
+[data-theme="dark"] .category-bar-item a{
+  color: #fff;
+  padding: 0.1rem 0.5rem;
+  margin: 0 0.25rem;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+#pagination {
+  width: 100%;
+  margin: auto;
+}
+
+h1.page-title {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-size: 2em;
+}
+
+a.page-title {
+  margin: 8px 0 20px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-size: 2em;
+  position: relative;
+  color: var(--text-highlight-color);
+  font-weight: bold;
+  display: block;
+}
+
+#category-lists {
+  width: 100%;
+  font-size:18px; 
+  color:#8D9519;
+  margin-left: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#category-lists-second {
+  width: 100%;
+  font-size:16px;
+  color:#0C9C0C;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#category-articles {
+  width: 100%;
+  font-size:15px; 
+  color:#009999;
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.fas.fa-archive {
+  margin-right: 5px;
+}
+.fas.fa-book {
+  margin-right: 5px;
+}
