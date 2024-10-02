@@ -6,3 +6,4 @@ public/
 _multiconfig.yml
 .github*/
 source/_posts/
+db.json
